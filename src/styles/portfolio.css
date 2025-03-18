@@ -1,0 +1,245 @@
+/********************************************* PORTFOLIO PAGE ******************************************/
+
+.navbar-sidebar.closed~.content {
+    margin-left: 50px;
+    padding: 30px;
+    width: calc(100% - 20px);
+}
+
+/* Portfolio Page Styles */
+.portfolio-header {
+    text-align: center;
+    padding: 40px;
+}
+
+.modal-title {
+    margin: 0;
+    /* Remove any default margin */
+    font-size: 2em;
+    /* Adjust the size of the title */
+    flex-grow: 1;
+    /* Allow the title to take available space and align it to the left */
+    font-weight: bold;
+    color: #357354;
+}
+
+.modal-elements{
+    margin: 0;
+    /* Remove any default margin */
+    font-size: 1.2em;
+    /* Adjust the size of the title */
+    flex-grow: 1;
+    /* Allow the title to take available space and align it to the left */
+    font-weight: bold;
+    color: #357354;
+}
+
+.portfolio-header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #357354;
+}
+
+.portfolio-header p {
+    font-size: 16px;
+    color: #555;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* Ensure it takes full width */
+}
+
+
+/* 🔹 Hire Me Button */
+.portfolio-hire-btn {
+    background-color: #47AE7D;
+    color: white;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.portfolio-hire-btn:hover {
+    background-color: #357354;
+}
+
+/* 🔹 Section Divider */
+.portfolio-thin-section-divider {
+    border: 1px solid !important;
+    margin: 0 !important;
+    color: #357354;
+}
+
+/* 🔹 Horizontal Line */
+.portfolio-divider {
+    border: 0.5px solid #ddd;
+    margin: 20px auto;
+    width: 80%;
+}
+
+/********************************************* PORTFOLIO GRID ******************************************/
+
+/* 🔹 Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* 🔹 Portfolio Item */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🔹 Hover Effects */
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    transform: translateY(0);
+}
+
+/********************************************* VIEW DETAILS BUTTON ******************************************/
+
+/* 🔹 View Details Button */
+.portfolio-view-btn {
+    background-color: #ffcc00;
+    color: black;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.portfolio-view-btn:hover {
+    background-color: #ffaa00;
+}
+
+
+/* Modal content styles */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 2.5em;
+    color: #357354;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Blur effect on portfolio content */
+.portfolio-content-wrapper.blur-background {
+    filter: blur(5px);
+    /* Apply blur effect to background */
+    pointer-events: none;
+    /* Disable clicks on the blurred content */
+}
+
+/* Optional: you can prevent interaction with blurred elements */
+.portfolio-content-wrapper.blur-background * {
+    pointer-events: none;
+    /* This will prevent clicking on any content in the background */
+}
+
+#projectModal {
+    display: none;
+    /* Hide modal on page load */
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 40px;
+    margin-bottom: 40px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80%;
+    overflow-y: auto;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Show Modal on Click */
+#projectModal.show {
+    display: flex;
+    /* Ensure it appears when opened */
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Modal Background Blur */
+.blur-background {
+    filter: blur(8px);
+    pointer-events: none;
+}
+
+/* Ensure Modal is Not Blurred */
+#projectModal {
+    filter: none !important;
+}
+
+
+.modal-image {
+    width: 100%;
+    /* Make sure image doesn't exceed the container */
+    max-width: 100%;
+    /* Ensures it fits within the container */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-bottom: 20px;
+    /* Add some space below the image */
+}
+
+.modal-description,
+.project-overview,
+.project-approach,
+.project-results {
+    margin: 15px 0;
+    /* Add some spacing for readability */
+}

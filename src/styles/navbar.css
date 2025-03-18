@@ -1,0 +1,198 @@
+/* 🔹 Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/********************************************* SIDEBAR ******************************************/
+
+/* Sidebar (Default Open) */
+.navbar-sidebar {
+    height: 100vh;
+    background-color: #47AE7D;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    width: 260px;
+    overflow-y: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Collapsed Sidebar */
+.navbar-sidebar.closed {
+    width: 70px;
+    padding: 20px 5px;
+    overflow: hidden;
+}
+
+/********************************************* TOGGLE BUTTON ******************************************/
+
+/* Toggle Button */
+.navbar-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1100;
+}
+
+/********************************************* PROFILE IMAGE ******************************************/
+
+/* Profile Image */
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    margin: 10px 0;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Adjust profile size when sidebar is collapsed */
+.navbar-sidebar.closed .profile-img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Name */
+.navbar-sidebar h4 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+    transition: opacity 0.3s ease;
+}
+
+/* Hide Name When Collapsed */
+.navbar-sidebar.closed h4 {
+    opacity: 0;
+}
+
+/********************************************* NAV LINKS ******************************************/
+
+/* Navigation Links */
+.navbar-nav-links {
+    width: 100%;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+/* Hide Navigation Links When Sidebar is Closed */
+.navbar-sidebar.closed .navbar-nav-links {
+    display: none;
+}
+
+/* Navigation Link Styling */
+.navbar-nav-links a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* Icons inside Navigation */
+.navbar-nav-links a i {
+    background: white;
+    color: #47AE7D;
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Active Link */
+.navbar-nav-links a.active {
+    font-weight: bold;
+    color: #295745 !important;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hover Effect */
+.navbar-nav-links a:hover {
+    color: #295745 !important;
+    font-weight: bold;
+}
+
+/********************************************* SOCIAL ICONS ******************************************/
+
+/* Social Icons */
+.navbar-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    transition: opacity 0.3s ease;
+}
+
+/* Hide Social Icons When Sidebar is Collapsed */
+.navbar-sidebar.closed .navbar-social-icons {
+    opacity: 0;
+}
+
+/********************************************* RESPONSIVE DESIGN ******************************************/
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .navbar-sidebar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-nav-links.show {
+        display: flex;
+    }
+
+    .navbar-nav-links a {
+        padding: 12px;
+        font-size: 18px;
+        justify-content: center;
+    }
+
+    /* Make sidebar collapsible */
+    .navbar-sidebar.closed {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+}

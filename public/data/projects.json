@@ -1,0 +1,74 @@
+{
+    "ellucian-payment-services": {
+      "title": "Ellucian Payment Services",
+      "image": "images/payment-system.jpg",
+      "description": "Led the development of a SaaS-based enterprise payment platform integrated with AWS.",
+      "details": {
+        "projectOverview": "Developed a highly scalable microservices-based payment processing system, integrating various third-party payment gateways.",
+        "approach": [
+          "Designed a centralized payment gateway integrating Touchnet, Flywire, and Payment Client APIs.",
+          "Developed microservices using Node.js, NestJS, and AWS Serverless.",
+          "Implemented retry mechanisms and circuit breakers, reducing payment failures by 30%.",
+          "Ensured PCI-DSS compliance by securing API authentication and payment data handling."
+        ],
+        "solutionAndResults": "Reduced payment processing failures by 20%, ensuring a 99.9% uptime for payment services."
+      }
+    },
+    "credit-card-fraud-detection": {
+      "title": "Credit Card Fraud Detection",
+      "image": "images/fraud-detection.jpeg",
+      "description": "Developed a fraud detection model using AI & ML, achieving 95% accuracy.",
+      "details": {
+        "projectOverview": "Built AI-powered fraud detection models to identify anomalies in real-time banking transactions.",
+        "approach": [
+          "Trained models on 100,000+ transactions using Scikit-Learn & TensorFlow.",
+          "Implemented Isolation Forest & One-Class SVM for anomaly detection.",
+          "Used SMOTE to handle class imbalance, improving detection rates."
+        ],
+        "solutionAndResults": "Achieved 95% precision, reducing fraud-related financial losses significantly."
+      }
+    },
+    "image-captioning": {
+      "title": "Automated Image Captioning System",
+      "image": "images/image-captioning.png",
+      "description": "Developed an AI-powered system for generating captions for images using deep learning.",
+      "details": {
+        "projectOverview": "Designed a deep learning model that generates captions for images, improving accessibility.",
+        "approach": [
+          "Used ResNet50 for feature extraction and LSTM for sequence generation.",
+          "Implemented Attention Mechanism to improve caption accuracy.",
+          "Trained on the MS-COCO dataset with 120,000+ images."
+        ],
+        "solutionAndResults": "Achieved a BLEU score of 0.67, significantly outperforming baseline models."
+      }
+    },
+    "quercus-logging-system": {
+      "title": "Quercus Logging System",
+      "image": "images/logging-system.jpg",
+      "description": "Developed a microservice to store and analyze logs using AWS S3 and Athena.",
+      "details": {
+        "projectOverview": "Implemented a scalable logging system to manage cloud-based event logs efficiently.",
+        "approach": [
+          "Built a microservice using Node.js and PL/SQL to fetch logs in real-time.",
+          "Integrated AWS S3 for storage and Amazon Athena for querying logs.",
+          "Enabled real-time monitoring and analytics for debugging production issues."
+        ],
+        "solutionAndResults": "Improved logging accessibility by 30%, enabling faster debugging and issue resolution."
+      }
+    },
+    "inventory-management": {
+      "title": "Enterprise Inventory Management System",
+      "image": "images/inventory.png",
+      "description": "Developed a Java-based inventory system for efficient stock management.",
+      "details": {
+        "projectOverview": "Designed a Spring Boot-based inventory management system, improving stock tracking and fulfillment.",
+        "approach": [
+          "Implemented Java Streams API & Multithreading to optimize order processing.",
+          "Designed a PostgreSQL-backed data layer for seamless storage.",
+          "Deployed using Docker and Kubernetes, ensuring high availability."
+        ],
+        "solutionAndResults": "Reduced inventory errors by 40%, improving order fulfillment rates."
+      }
+    }
+  }
+  

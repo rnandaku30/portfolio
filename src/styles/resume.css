@@ -1,0 +1,297 @@
+/* General Styling */
+.resume-container {
+    padding: 40px;
+    max-width: 850px;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+body {
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+
+/* Page-style Box */
+.resume-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd; /* Light border to create a page-like feel */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for a floating effect */
+    /* Ensure the font style and size are consistent */
+    font-family: sans-serif; /* Ensure sans-serif font */
+    font-size: 12px;         /* Ensure font size is 12px */
+
+}
+
+
+/* Download Button */
+.downloadResume {
+    background-color: #357354;
+    color: white;
+    border: none;
+    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.downloadResume:hover {
+    background-color: #285a42;
+}
+
+/* General layout for resume-top */
+.resume-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+}
+
+/* Header: Center the name and title */
+.resume-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.resume-header h1, .resume-header h3 {
+    margin: 0;
+}
+
+/* Contact details - Center them in a row */
+.resume-contact {
+    display: flex;
+    font-size: 12px;
+    width: 100%;
+}
+
+.resume-contact ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-top: 3px;
+    flex-wrap: wrap;
+}
+
+.resume-contact li {
+    display: flex;
+    align-items: center;
+    margin: 0 3px;
+}
+
+.resume-contact li i {
+    margin-right: 2px;
+}
+
+.resume-contact a {
+    color: #0077b5;
+    text-decoration: none;
+}
+
+.resume-contact a:hover {
+    text-decoration: underline;
+}
+/* Contact Icons */
+.contact-icon {
+    font-size: 14px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Specific Icon Colors */
+.email-icon {
+    color: #D44638; /* Gmail Red */
+}
+
+.phone-icon {
+    color: #4CAF50; /* Green */
+}
+
+.linkedin-icon {
+    color: #0A66C2; /* LinkedIn Blue */
+}
+
+.portfolio-icon {
+    color: #357354; /* Dark Green */
+}
+
+.address-icon {
+    color: #FF9800; /* Orange */
+}
+
+/* Thin Section Divider */
+.resume-thin-section-divider {
+    border: 1px solid !important;
+    margin: 0 0 10px 0 !important; /* No gap above, 15px gap below */
+}
+
+/* Resume Content Grid */
+.resume-content {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Section Headers */
+.resume-section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.resume-section-header h2 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 10px
+}
+
+
+.resume-item h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.resume-item p, #resume-summary {
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.resume-item ul {
+    list-style-type: disc;
+    padding-left: 15px;
+}
+
+.resume-item li {
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+/* Education Section */
+.resume-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.resume-table td {
+    padding: 1px 0px;
+    vertical-align: top;
+}
+
+.resume-table .edu-degree {
+    font-size: 12px;
+}
+
+.resume-table .edu-duration {
+    text-align: right;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.resume-table .edu-coursework {
+    font-size: 12px;
+}
+
+.resume-table .edu-gpa {
+    text-align: right;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/*Experience */
+/* Experience Section */
+.exp-item {
+    margin-bottom: 20px;
+}
+
+/* Job Header: Title on Left, Duration on Right */
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.exp-title {
+    font-weight: bold;
+}
+
+.exp-duration {
+    text-align: right;
+    font-style: italic;
+}
+
+/* Tech Stack */
+.exp-tech-stack {
+    font-size: 12px;
+    margin: 2px 0;
+}
+
+
+/* Role Name */
+.exp-role {
+    font-size: 14px;
+    margin-bottom: 1px;
+    margin-top: 0px;
+}
+
+/* List of Achievements */
+.exp-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 12px;
+    margin-bottom: 0%;
+}
+
+
+
+/* */
+
+/* Skills Section */
+/* List of Achievements */
+.skill-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 12px;
+    margin-bottom: 0%;
+}
+
+.skill-list p{
+    margin-bottom: 0px;
+}
+
+
+/* Awards Section */
+.award-list{
+    font-size: 12px; 
+}
+
+/* Ensure consistent print formatting */
+@media print {
+    body {
+        font-size: 12px;
+    }
+
+    .resume-box {
+        page-break-before: always;
+        page-break-inside: avoid;
+        page-break-after: always;
+    }
+
+    .resume-content {
+        display: block;
+    }
+
+    /* Force page breaks after sections */
+    .resume-section {
+        page-break-before: always;
+    }
+
+
+
+    /* Ensure Footer is Visible in Print */
+}

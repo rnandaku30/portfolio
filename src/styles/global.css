@@ -1,0 +1,41 @@
+/* Reset Default Margins & Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Improve Spacing */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+/* Ensure Content is Centered */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+
+.navbar-sidebar.closed~.content {
+    margin-left: 50px;
+    padding: 30px;
+    width: calc(100% - 20px);
+}
+
+/* Adjust Content for Mobile */
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,194 @@
+{
+    "name": "Ramyashree Nandakumar",
+    "title": "Full Stack Developer",
+    "email": "ramyashree.nandakumar@gmail.com",
+    "phone": "+1 (571) 663-3026",
+    "linkedin": "https://linkedin.com/in/ramyashree-nandakumar",
+    "portfolio": "http://ramya-portfolio.s3-website-us-east-1.amazonaws.com/",
+    "address": "Fairfax, VA, USA",
+    "summary": "Experienced Full-Stack Developer with 4+ years of expertise in backend development, microservices, API integrations, and cloud-based solutions. Proficient in Java (Spring Boot, Hibernate, JPA), Node.js (NestJS, Express.js), React.js, AWS (Serverless, S3, DynamoDB, Lambda), and PL/SQL. Strong background in designing enterprise payment systems, CI/CD pipelines, containerized deployments (Docker, Kubernetes), and AI/ML applications. Passionate about building scalable, secure, and high-performing software solutions.",
+    "education": [
+        {
+            "degree": "Master of Science in Computer Science",
+            "institution": "George Mason University, Fairfax, VA",
+            "duration": "Aug 2023 – May 2025",
+            "gpa": "3.74/4.0",
+            "coursework": [
+                "Advanced Machine Learning",
+                "Deep Neural Networks",
+                "Artificial Intelligence"
+            ]
+        },
+        {
+            "degree": "Bachelor of Technology",
+            "institution": "CMR Institute of Technology, Bangalore, India",
+            "duration": "Aug 2015 – Jun 2019",
+            "gpa": "8.83/10",
+            "coursework": [
+                "Database Management Systems",
+                "Operating Systems",
+                "Algorithms"
+            ]
+        }
+    ],
+    "experience": [
+        {
+            "title": "Software Engineer II",
+            "company": "Ellucian Higher Education Systems",
+            "duration": "Jun 2019 – Aug 2023",
+            "tech_stack": [
+                "Java",
+                "Spring Boot",
+                "JPA",
+                "Hibernate",
+                "Node.js",
+                "NestJS",
+                "Express.js",
+                "React.js",
+                "AWS (Lambda, S3, SNS, DynamoDB)",
+                "PL/SQL",
+                "Docker",
+                "Kubernetes"
+            ],
+            "achievements": [
+                {
+                    "role": "Internship: File Storage System Optimization",
+                    "details": [
+                        "Designed a scalable file storage system, enabling AWS S3, on-premise server, or Oracle DB selection, improving data accessibility and storage efficiency.",
+                        "Reduced Oracle DB storage overhead by 40% by offloading large files to AWS S3, improving system performance.",
+                        "Engineered automated environment configurations, enabling seamless cloud bucket management, reducing manual intervention by 80%."
+                    ]
+                },
+                {
+                    "role": "Multi-Module Development (Finance, Payments, Students)",
+                    "details": [
+                        "Engineered and optimized backend APIs in Node.js & AWS, increasing data processing efficiency by 35%.",
+                        "Developed GraphQL services, reducing API response times by 40% and enhancing real-time access.",
+                        "Facilitated cross-functional collaboration to optimize Finance, Payments, and Student Management data flows, improving system interoperability."
+                    ]
+                },
+                {
+                    "role": "Microservices Development & DfE Integration",
+                    "details": [
+                        "Designed and integrated microservices to process DfE (Department for Education) payloads, automating 80% of manual admissions data entry.",
+                        "Architected a real-time event-driven data pipeline leveraging PL/SQL queues & AWS SNS, ensuring 99.9% data synchronization accuracy.",
+                        "Enabled automated ERP system publishing, reducing data entry time by 50%."
+                    ]
+                },
+                {
+                    "role": "Ellucian Payment Services – Microservices & Serverless Payments",
+                    "details": [
+                        "Led development of a centralized payment service, consolidating Touchnet, Flywire, and Payment Client integrations, reducing failure rates by 30%.",
+                        "Implemented AWS Serverless frameworks for payments, scaling transaction processing by 50% and improving uptime to 99.9%.",
+                        "Enhanced microservices resilience by applying circuit breaker patterns & retry logic, reducing payment failures by 25%"
+                    ]
+                }
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "title": "Enterprise Inventory Management System",
+            "tech_stack": [
+                "Java (Multithreading, Collections, Streams, Generics)",
+                " Spring Boot",
+                " PostgreSQL",
+                "Docker",
+                "Kubernetes"
+            ],
+            "achievements": [
+                "Built a high-efficiency inventory system, improving stock tracking and order fulfillment, reducing inventory errors by 40%.",
+                "Enhanced backend processing with Core Java multithreading & Streams API, cutting query execution time by 30%.",
+                "Deployed with Kubernetes & Docker, ensuring auto-scaling and reducing downtime by 50%."
+            ]
+        },
+        {
+            "title": "Manufacturing Process Optimization System – Arihant Ispat",
+            "tech_stack": [
+                "Java",
+                "Spring Boot",
+                "PostgreSQL",
+                " Optimization Algorithms"
+            ],
+            "achievements": [
+                "Engineered a manufacturing system, optimizing production workflows and reducing material handling inefficiencies by 25%.",
+                "Applied TSP-based scheduling, improving task execution efficiency by 35%.",
+                "Structured a Spring Boot backend, enhancing data consistency and retrieval speed."
+            ]
+        },
+        {
+            "title": "Automated Image Captioning System – AI for Visual Understanding",
+            "tech_stack": [
+                "TensorFlow",
+                "Keras",
+                "ResNet50",
+                "GPT-2 Tokenizer"
+            ],
+            "achievements": [
+                "Created an AI-driven captioning model, enhancing image-text pairing accuracy, achieving a BLEU score of 0.67.",
+                "Processed 120,000+ images, increasing dataset efficiency and training speed by 30%.",
+                "Integrated ResNet50 with an attention-based LSTM, refining text generation by 20%."
+            ]
+        },
+        {
+            "title": "Credit Card Fraud Detection – AI for Financial Security",
+            "tech_stack": [
+                "Python",
+                "Scikit-Learn",
+                "TensorFlow",
+                "Pandas",
+                "Matplotlib"
+            ],
+            "achievements": [
+                "Developed fraud detection models, boosting precision to 95% and lowering false positives by 30%.",
+                "Utilized SMOTE for class balancing, improving anomaly detection accuracy by 20%.",
+                "Optimized Random Forest & Gradient Boosting models, reducing fraud classification errors by 25%."
+            ]
+        }
+    ],
+    "skills": {
+        "languages": [
+            "Java",
+            "Python",
+            "Node.js",
+            "JavaScript",
+            "PL/SQL",
+            "HTML",
+            "CSS"
+        ],
+        "frameworks": [
+            "Spring Boot",
+            "Hibernate",
+            "JPA",
+            "React.js",
+            "Nest.js",
+            "Express.js",
+            "TensorFlow",
+            "Keras"
+        ],
+        "cloud_databases": [
+            "AWS (Serverless, S3, SNS, DynamoDB)",
+            "Oracle",
+            "PostgreSQL",
+            "MongoDB"
+        ],
+        "devops": [
+            "Docker",
+            "Kubernetes",
+            "CI/CD Pipelines (Jenkins, GitHub Actions)"
+        ],
+        "other": [
+            "API Development",
+            "Microservices",
+            "Payment Integrations",
+            "AI/ML",
+            "Data Structures"
+        ]
+    },
+    "awards": [
+        {
+            "title": "High-Impact Award",
+            "description": "Led a project transition ensuring 99.9% uptime and reducing operational costs by 25%."
+        }
+    ]
+}
