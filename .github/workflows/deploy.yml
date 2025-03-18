@@ -1,41 +1,39 @@
-name: Deploy to S3
+name: Upload Website
 
 on:
   push:
     branches:
-      - main  # Change this to your preferred branch name (e.g., 'master')
+      - master  # Change to 'main' if you are using the 'main' branch
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
       # Step 1: Check out the code
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2  # Corrected version for GitHub Actions checkout
 
       # Step 2: Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'  # You can specify a different version if needed
+          node-version: '16'  # Make sure you specify the Node.js version you're using for your React app
 
       # Step 3: Install dependencies
       - name: Install dependencies
-        run: npm install
+        run: npm install  # Install dependencies defined in package.json
 
-      # Step 4: Build React app
+      # Step 4: Build the React app
       - name: Build React app
-        run: npm run build
+        run: npm run build  # This creates the 'build' directory with the production-ready React app
 
       # Step 5: Deploy to S3
       - name: Deploy to S3
-        uses: jakejarvis/s3-sync-action@master
+        uses: jakejarvis/s3-sync-action@master  # Using s3-sync-action to sync build to S3
         with:
-          args: "--delete ./build/ s3://${{ secrets.AWS_S3_BUCKET }}/"  # Sync from build to S3 bucket
-
+          args: --acl public-read --follow-symlinks --delete ./build/ s3://${{ secrets.AWS_S3_BUCKET }}/
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: ${{ secrets.AWS_REGION }}
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_REGION: 'us-east-1'  # You can specify the AWS region here (optional)
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}  # Fetching S3 bucket name from GitHub secrets
