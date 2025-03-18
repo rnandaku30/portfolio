@@ -32,8 +32,8 @@ jobs:
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@master
         with:
-          args: '--delete ./build'  # Use 'args' to specify the source directory and delete files from S3
-          
+          args: "--delete ./build/ s3://${{ secrets.AWS_S3_BUCKET }}/"  # Sync from build to S3 bucket
+
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
