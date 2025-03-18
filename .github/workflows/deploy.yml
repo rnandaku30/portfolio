@@ -3,7 +3,7 @@ name: Upload Website
 on:
   push:
     branches:
-      - master  # Change to 'main' if you are using the 'main' branch
+      - main  # Change to 'main' if you are using the 'main' branch
 
 jobs:
   deploy:
