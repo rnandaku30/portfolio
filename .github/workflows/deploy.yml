@@ -1,41 +1,42 @@
 name: Deploy to S3
 
-# Trigger the workflow on push to the main branch
 on:
   push:
     branches:
-      - main  # Change this to the branch you're using (e.g., 'master')
+      - main  # Change this to your preferred branch name (e.g., 'master')
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # This specifies the type of runner to use
+    runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Check out the code
-    - name: Check out code
-      uses: actions/checkout@v2
+      # Step 1: Check out the code
+      - name: Check out code
+        uses: actions/checkout@v2
 
-    # Step 2: Set up Node.js
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16'  # Specify your Node.js version here
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # You can specify a different version if needed
 
-    # Step 3: Install dependencies
-    - name: Install dependencies
-      run: npm install
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
 
-    # Step 4: Build the React app
-    - name: Build React app
-      run: npm run build
+      # Step 4: Build React app
+      - name: Build React app
+        run: npm run build
 
-    # Step 5: Deploy to S3 using jakejarvis/s3-sync-action
-    - name: Deploy to S3
-      uses: jakejarvis/s3-sync-action@master
-      with:
-        aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws_region: ${{ secrets.AWS_REGION }}
-        aws_s3_bucket: ${{ secrets.AWS_S3_BUCKET }}   # Replace with your S3 bucket name
-        source_dir: './build'         # This points to your build folder
-        delete: 'true'                # Optional: Delete files that are not in the build folder
+      # Step 5: Deploy to S3
+      - name: Deploy to S3
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          entryPoint: './build'
+          args: '--delete'  # Optional: delete files from S3 that are not in the build folder
+
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}   # Set the S3 Bucket from GitHub Secrets
