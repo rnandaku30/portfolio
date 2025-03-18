@@ -1,9 +1,9 @@
-name: rnandakumar.com
+name: Upload Website
 
 on:
   push:
     branches:
-      - main  # Change to 'main' if you are using the 'main' branch
+      - master  # Change to 'main' if you are using the 'main' branch
 
 jobs:
   deploy:
@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'  # Make sure you specify the Node.js version you're using for your React app
+          node-version: '16'  # Specify your Node.js version here
 
       # Step 3: Install dependencies
       - name: Install dependencies
@@ -29,11 +29,11 @@ jobs:
 
       # Step 5: Deploy to S3
       - name: Deploy to S3
-        uses: jakejarvis/s3-sync-action@master  # Using s3-sync-action to sync build to S3
+        uses: jakejarvis/s3-sync-action@master
         with:
-          args: --acl public-read --follow-symlinks --delete ./build/ s3://${{ secrets.AWS_S3_BUCKET }}/
+          args: '--acl public-read --follow-symlinks --delete ./build/ s3://${{ secrets.AWS_S3_BUCKET }}/'
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: 'us-east-1'  # You can specify the AWS region here (optional)
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}  # Fetching S3 bucket name from GitHub secrets
+          AWS_REGION: 'us-east-1'  # Optional: specify the AWS region
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}  # S3 bucket name stored in secrets
