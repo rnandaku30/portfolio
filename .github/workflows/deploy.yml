@@ -11,7 +11,7 @@ jobs:
     steps:
       # Step 1: Check out the code
       - name: Check out code
-        uses: actions/checkout@v2  # Corrected version for GitHub Actions checkout
+        uses: actions/checkout@main  # Corrected version for GitHub Actions checkout
 
       # Step 2: Set up Node.js
       - name: Set up Node.js
