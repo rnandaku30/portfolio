@@ -84,8 +84,8 @@ body {
 /* Navigation Links */
 .navbar-nav-links {
     width: 100%;
-    margin-top: 10px;
     transition: 0.3s;
+    padding-left: 0px !important;
 }
 
 /* Hide Navigation Links When Sidebar is Closed */
@@ -153,46 +153,103 @@ body {
 
 /********************************************* RESPONSIVE DESIGN ******************************************/
 
+/********************************************* RESPONSIVE DESIGN ******************************************/
+
+/********************************************* RESPONSIVE DESIGN ******************************************/
+
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
+
+    /* Make the sidebar behave like a top nav and center its contents */
     .navbar-sidebar {
         width: 100%;
         height: auto;
-        position: fixed;
+        position: relative;
+        /* Changed from fixed */
         top: 0;
         left: 0;
         padding: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        /* Center all items, including image and icons */
         z-index: 1000;
     }
 
+    /* Show the toggle button if needed (or hide if not used) */
     .navbar-toggle {
         display: block;
     }
 
+    hr {
+        display: none
+    }
+
+    /* Always show nav links on mobile and center them */
     .navbar-nav-links {
-        display: none;
+        display: flex;
         flex-direction: column;
         width: 100%;
         text-align: center;
-    }
-
-    .navbar-nav-links.show {
-        display: flex;
+        margin-top: 10px;
+        align-items: center;
+        /* Center nav link items */
     }
 
     .navbar-nav-links a {
-        padding: 12px;
-        font-size: 18px;
-        justify-content: center;
+        flex: 0 0 50%;
+        /* Each item is 50% width */
+        box-sizing: border-box;
+        padding: 12px 0;
+        /* Adjust padding as needed */
+        text-align: center;
     }
 
-    /* Make sidebar collapsible */
+    /* Remove collapsing behavior on mobile so the nav doesn't vanish */
     .navbar-sidebar.closed {
-        width: 0;
-        height: 0;
-        overflow: hidden;
+        /* Instead of hiding, we simply ignore the "closed" state on mobile */
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        /* This pushes the image to one side and button to the other */
+        width: 100%;
+        padding: 5px 10px;
+    }
+
+    .navbar-nav-links a:hover {
+        color: #295745 !important;
+        font-weight: bold;
+        background: rgba(255, 255, 255, 0.2);
+    }
+    
+
+    .profile-img {
+        margin: 0;
+    }
+
+    .navbar-toggle {
+        margin: 0;
+    }
+
+    .navbar-sidebar.closed~.content {
+        margin-left: 0 !important;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .navbar-sidebar.closed .navbar-social-icons {
+        opacity: 0;
+        display: none;
+    }
+
+
+    /* Add top margin to the content so it doesn't get overlapped by the navbar */
+    .content {
+        margin-top: 60px;
+        /* Adjust this value based on your navbar's height */
+        margin-left: 0;
+        padding: 10px;
     }
 }

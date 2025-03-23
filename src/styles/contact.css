@@ -1,13 +1,11 @@
 /********************************************* CONTACT PAGE ******************************************/
 
-/* 🔹 Contact Page Container */
 .contact-container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 50px 30px;
+    padding: 50px 0px;
 }
 
-/* 🔹 Contact Header */
 .contact-header {
     text-align: center;
     margin-bottom: 30px;
@@ -26,7 +24,6 @@
 
 /********************************************* CONTACT CONTENT ******************************************/
 
-/* 🔹 Contact Content Wrapper */
 .contact-content {
     display: flex;
     flex-wrap: wrap;
@@ -34,10 +31,8 @@
     gap: 30px;
 }
 
-/* 🔹 Contact Information */
 .contact-info {
     flex: 1;
-    min-width: 400px;
     background: #f8f9fa;
     padding: 25px;
     border-radius: 10px;
@@ -70,18 +65,15 @@
     color: #357354;
 }
 
-/* 🔹 Ensure Links Stay Within Container */
 .contact-info a {
     display: inline-block;
     text-decoration: none;
-    
 }
 
 .contact-info a:hover {
     text-decoration: underline;
 }
 
-/* 🔹 Contact Form */
 .contact-form {
     flex: 1;
     font-size: 16px;
@@ -95,10 +87,8 @@
 
 /********************************************* FORM STYLING ******************************************/
 
-/* 🔹 Form Input Fields */
 .contact-input {
     width: 100%;
-
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 6px;
@@ -107,17 +97,14 @@
     color: #357354;
 }
 
-/* 🔹 Form Labels */
 .contact-label {
     font-size: 16px;
     font-weight: bold;
-    color: #333;
     color: #357354;
     display: block;
     margin-bottom: 6px;
 }
 
-/* 🔹 Submit Button */
 .contact-submit {
     background-color: #47AE7D;
     color: white;
@@ -130,7 +117,7 @@
     width: 100%;
     margin-top: 15px;
     font-weight: bold;
-    transition: 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .contact-submit:hover {
@@ -139,7 +126,6 @@
 
 /********************************************* SUCCESS MESSAGE ******************************************/
 
-/* Success Message Styling */
 .success-message {
     margin-top: 15px;
     padding: 10px;
@@ -153,28 +139,32 @@
 
 /********************************************* RESPONSIVE DESIGN ******************************************/
 
-/* 🔹 Responsive Layout for Smaller Screens */
 @media (max-width: 768px) {
     .contact-container {
         max-width: 100%;
         padding: 30px 15px;
+        /* Optionally, hide any horizontal overflow */
+        overflow-x: hidden;
     }
-
+  
     .contact-content {
         flex-direction: column;
         align-items: center;
     }
-
+  
+    /* Override min-width for elements on small screens */
     .contact-info, .contact-form {
         width: 100%;
+        min-width: 0;
     }
-
+  
     .contact-info li {
         flex-direction: column;
         align-items: flex-start;
     }
-
+  
     .contact-info li i {
         margin-bottom: 5px;
     }
-}
+  }
+  

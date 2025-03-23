@@ -46,10 +46,10 @@ const Navbar = () => {
             {/* Navigation Links */}
             <div className={`navbar-links-container ${isOpen ? "show" : "hide"}`}>
                 <ul className="navbar-nav-links">
-                    <NavLink to="/" onClick={toggleNavbar}><i className="fas fa-user"></i> About Me</NavLink>
-                    <NavLink to="/portfolio" onClick={toggleNavbar}><i className="fas fa-briefcase"></i> Portfolio</NavLink>
-                    <NavLink to="/resume" onClick={toggleNavbar}><i className="fas fa-file-alt"></i> Resume</NavLink>
-                    <NavLink to="/contact" onClick={toggleNavbar}><i className="fas fa-envelope"></i> Contact</NavLink>
+                    <NavLink to="/"><i className="fas fa-user"></i> About Me</NavLink>
+                    <NavLink to="/portfolio" ><i className="fas fa-briefcase"></i> Portfolio</NavLink>
+                    <NavLink to="/resume" ><i className="fas fa-file-alt"></i> Resume</NavLink>
+                    <NavLink to="/contact"><i className="fas fa-envelope"></i> Contact</NavLink>
                 </ul>
             </div>
         </nav>

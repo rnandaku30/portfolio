@@ -1,9 +1,9 @@
 /* General Styling */
 .resume-container {
-    padding: 40px;
     max-width: 850px;
     font-family: sans-serif;
     font-size: 12px;
+    padding: 20px;
 }
 body {
     font-family: sans-serif;
@@ -39,8 +39,18 @@ body {
     background-color: #285a42;
 }
 
+
+/* Header: Center the name and title */
+.resume-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0px;
+    justify-content: space-between;
+}
+
 /* General layout for resume-top */
-.resume-top {
+.resume-top .resume-header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,13 +58,6 @@ body {
     padding: 0px;
 }
 
-/* Header: Center the name and title */
-.resume-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 0px;
-}
 
 .resume-header h1, .resume-header h3 {
     margin: 0;
@@ -73,6 +76,7 @@ body {
     padding: 0;
     margin-top: 3px;
     flex-wrap: wrap;
+    margin-bottom: 0px !important;
 }
 
 .resume-contact li {
@@ -295,3 +299,91 @@ body {
 
     /* Ensure Footer is Visible in Print */
 }
+
+
+/********************************************* MOBILE RESPONSIVE ADJUSTMENTS ******************************************/
+
+@media (max-width: 768px) {
+    /* Reduce overall container padding and allow full width */
+    .resume-container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .resume-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .resume-top .resume-header {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+    }
+
+
+    
+    /* Adjust the resume box to use a bit less padding */
+    .resume-box {
+        padding: 15px;
+        margin: 0 auto;
+    }
+    
+    /* Stack resume content in one column for easier viewing */
+    .resume-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    /* Center header content and adjust font sizes */
+    .resume-top {
+        padding: 10px;
+    }
+    
+    .resume-header h1 {
+        font-size: 22px;
+    }
+    
+    .resume-header h3 {
+        font-size: 18px;
+    }
+    
+    /* Adjust contact section to stack items */
+    .resume-contact {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .resume-contact ul {
+        justify-content: center;
+    }
+    
+    .resume-contact li {
+        margin: 3px 0;
+    }
+    
+    /* Reduce section header font size for mobile */
+    .resume-section-header h2 {
+        font-size: 16px;
+    }
+    
+    /* Adjust experience and list item font sizes */
+    .exp-header,
+    .exp-title,
+    .exp-duration,
+    .exp-tech-stack,
+    .exp-role,
+    .resume-item h4,
+    .resume-item p,
+    .resume-item li {
+        font-size: 13px;
+    }
+    
+    /* Optionally, adjust the download button for easier tap targets */
+    .downloadResume {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+  }
+  

@@ -1,13 +1,16 @@
 /********************************************* MAIN CONTENT ******************************************/
 
-/* 🔹 Main Content */
-.about-content .navbar-sidebar.closed .content{
+/* Adjust content when sidebar is collapsed */
+.about-content .navbar-sidebar.closed .content {
     padding: 30px;
     width: calc(100% - 20px);
 }
 
+.about-content{
+    padding: 20px;
+}
 
-/* 🔹 Content Box Styling */
+/* Content Box Styling */
 .about-content-box {
     background: white;
     padding: 20px;
@@ -16,68 +19,45 @@
     margin-bottom: 20px;
 }
 
-.about-content-box h1 {
+.about-content-box h1,
+.about-content-box h3,
+.about-title-section h2 {
     color: #295745;
 }
 
-.about-content-box h3 {
-    color: #295745;
-    font-size: 26px;
-    font-weight: bold;
-}
-
-
-/* Vertical Line Styling */
-/* Vertical Line Styling - Align to Center */
+/* Vertical Line & Title Section */
 .about-title-section {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /* Ensures centering */
     gap: 15px;
     margin-bottom: 15px;
 }
 
-/* The vertical line should be centered with the text */
 .about-title-line {
     width: 4px;
     height: 45px;
     background-color: #357354;
-    /* Dark Green */
     display: inline-block;
 }
 
-/* Ensuring the title (h2) aligns properly */
-.about-title-section h2 {
-    margin: 0;
-    font-size: 26px;
-    font-weight: bold;
-    color: #295745;
-}
-
-
-
-
-/* 🔹 Responsive Fix */
+/********************************************* RESPONSIVE FIX ******************************************/
 @media (max-width: 768px) {
     .about-sidebar {
         width: 100%;
         height: auto;
         position: relative;
+        padding: 10px;  /* Optional: adjust padding for mobile */
     }
-
     .about-content {
         margin-left: 0;
         width: 100%;
+        padding: 10px; /* Ensure there's some padding on mobile */
     }
 }
 
-/********************************************* MAIN CONTENT ******************************************/
-
-
 /********************************************* SKILL CARD ******************************************/
 
-/* Skill Card Styling */
 .about-skill-card {
     display: flex;
     align-items: center;
@@ -88,62 +68,19 @@
     margin-bottom: 10px;
 }
 
-/* Adjust icon size */
 .about-skill-card i {
     font-size: 30px;
     margin-right: 15px;
 }
 
 /* Individual Skill Colors */
-.about-skill-card .fa-python {
-    color: #3776AB;
-}
-
-/* Individual Skill Colors */
-.about-skill-card .fa-java {
-    color: #f89820;
-}
-
-/* Java Orange */
-.about-skill-card .fa-js {
-    color: #F7DF1E;
-}
-
-/* Docker Blue */
-.about-skill-card .fa-docker {
-    color: #049cec;
-}
-
-/* JavaScript Yellow */
-.about-skill-card .fa-node {
-    color: #68A063;
-}
-
-/* Node.js Green */
-.about-skill-card .fa-react {
-    color: #61DBFB;
-}
-
-/* React Cyan */
-.about-skill-card .fa-database {
-    color: #0064A5;
-}
-
-/* Database Blue */
-.about-skill-card .fa-cloud {
-    color: #FF9900;
-}
-
-/* AWS Orange */
-.about-skill-card .fa-cogs {
-    color: #6C757D;
-}
-
-/* Grey for Misc */
-.about-skill-card .fa-brain {
-    color: #FFA500;
-}
-
-/* Orange for AI */
-
-/********************************************* SKILL CARD ******************************************/
+.about-skill-card .fa-python { color: #3776AB; }
+.about-skill-card .fa-java { color: #f89820; }
+.about-skill-card .fa-js { color: #F7DF1E; }
+.about-skill-card .fa-docker { color: #049cec; }
+.about-skill-card .fa-node { color: #68A063; }
+.about-skill-card .fa-react { color: #61DBFB; }
+.about-skill-card .fa-database { color: #0064A5; }
+.about-skill-card .fa-cloud { color: #FF9900; }
+.about-skill-card .fa-cogs { color: #6C757D; }
+.about-skill-card .fa-brain { color: #FFA500; }

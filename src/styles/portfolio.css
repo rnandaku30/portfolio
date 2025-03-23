@@ -243,3 +243,95 @@
     margin: 15px 0;
     /* Add some spacing for readability */
 }
+
+/********************************************* MOBILE RESPONSIVE ADJUSTMENTS ******************************************/
+
+/* For devices up to 768px wide */
+@media (max-width: 768px) {
+    /* Adjust header spacing and font sizes */
+    .portfolio-header {
+        padding: 30px 20px;
+    }
+    .portfolio-header h1 {
+        font-size: 26px;
+    }
+    .portfolio-header p {
+        font-size: 15px;
+    }
+    
+    /* Adjust grid layout: reduce the minimum width */
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    /* Adjust buttons */
+    .portfolio-hire-btn,
+    .portfolio-view-btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    /* Adjust modal content */
+    .modal-content {
+        padding: 18px;
+        max-width: 95%;
+    }
+    #projectModal {
+        padding: 25px;
+        width: 95%;
+        max-width: 95%;
+        margin-bottom: 30px;
+    }
+    
+    /* Adjust modal titles/elements if needed */
+    .modal-title,
+    .modal-elements {
+        font-size: 1.5em;
+    }
+}
+
+/* For very small devices (e.g. iPhone SE, up to 480px wide) */
+@media (max-width: 480px) {
+    .portfolio-header {
+        padding: 20px;
+    }
+    .portfolio-header h1 {
+        font-size: 24px;
+    }
+    .portfolio-header p {
+        font-size: 14px;
+    }
+    
+    /* Force a single-column grid if necessary */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    /* Reduce button sizes */
+    .portfolio-view-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    /* Adjust modal content further */
+    .modal-content {
+        padding: 15px;
+        max-width: 90%;
+    }
+    #projectModal {
+        padding: 20px;
+        width: 90%;
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+    
+    /* Optionally adjust modal title/elements */
+    .modal-title,
+    .modal-elements {
+        font-size: 1.4em;
+    }
+}
